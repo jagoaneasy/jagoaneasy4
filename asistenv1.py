@@ -8,6 +8,9 @@ from telethon import utils
 from datetime import datetime,timedelta
 
 from importlib import reload
+from pyrogram import Client
+#pyro
+plugins = dict(root="plugins")
 
 def buka(n):
     o=open("NewTextDocument.txt","r").read().splitlines()
@@ -354,7 +357,19 @@ async def main():
                         await asisten1.delete_messages(delit)"""
 
                 
+                elif "Jalankan bot " in event.text:
+                    try:
+                        iddbot=event.text.split()
+                        namapyro=iddbot[2]
+                        apipyro=iddbot[3]
+                        hashpyro=iddbot[4]
+                        tokenpyro=iddbot[5]
+                        await Client(name=namapyro, api_id =apipyro, api_hash=hashpyro, bot_token=tokenpyro,plugins=plugins).run()
+                    except:
+                        await event.reply("pyro gagal dijalankan")
 
+                        
+                    
                 elif event.text=="sibot" :
                     #reload(sibot)
                     await asyncio.sleep(5)

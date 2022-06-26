@@ -41,6 +41,10 @@
         "TOKEN": {
             "description": "TB",
             "value": ""
+        },
+    	"rangch": {
+            "description": "rangch",
+            "value": ""
         }
     },
     "buildpacks": [

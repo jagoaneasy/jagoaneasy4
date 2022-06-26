@@ -1,0 +1,51 @@
+
+{
+    "name": "Asisten Ayu",
+    "description": "Asisten Pribadi Nokos.",
+    "logo": "http://pngimg.com/uploads/paper_plane/paper_plane_PNG79.png",
+    "keywords": [
+        "@nokos_easy"
+    ],
+    "repository": "https://github.com/jagoaneasy/asisten2",
+    "website": "t.me/nokos_easy",
+    "success_url": "https://t.me/nokos_easy",
+    "env": {
+        "AccA": {
+            "description": "str, int,app",
+            "value": ""
+        },
+        "AccB": {
+            "description": "str, int,app",
+            "value": ""
+        },
+        "kgbmialc": {
+            "description": "kgbmialc",
+            "value": ""
+        },
+        "kgbid": {
+            "description": "kgb id",
+            "value": ""
+        },
+        "spt": {
+            "description": "oke",
+            "value": ""
+        },
+		"api": {
+            "description": "oke",
+            "value": ""
+        },
+		"app": {
+            "description": "oke",
+            "value": ""
+        },
+        "TOKEN": {
+            "description": "TB",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}

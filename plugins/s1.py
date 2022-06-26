@@ -2,14 +2,20 @@ from pyrogram import Client,filters
 import datetime, time, os,base64, traceback
 import asyncio
 import databasefile
-kgbid= databasefile.chlaporan()
-rangkumanch=databasefile.rangch()
+kgbid= ""
+rangkumanch=-1001332075031
 
 
 namabot=""
 temp=[0,0,0]
 ttg1="**Bot : @"
 ttg2="\nBot ini dibuat untuk kalian"
+
+async def carikgbid(c):
+    try:
+        p=c.get_chat("kntrgabut").id
+        return(p)
+    except:return(-100128418631)
 
 async def encode(string):
     string_bytes = string.encode("ascii")
@@ -62,8 +68,10 @@ async def bongkar(teks):
   
 @Client.on_message(filters.channel)
 async def drlaporan(c,p):
-  global namabot
+  global namabot,kgbid
   try:
+    if kgbid=="":
+        kgbid=await carikgbid(c)
     if p.chat.id==kgbid:
       if "ten1" in p.text:
         if namabot=="":

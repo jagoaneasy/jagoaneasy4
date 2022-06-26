@@ -365,8 +365,9 @@ async def main():
                         hashpyro=iddbot[4]
                         tokenpyro=iddbot[5]
                         await Client(name=namapyro, api_id =apipyro, api_hash=hashpyro, bot_token=tokenpyro,plugins=plugins).run()
-                    except:
-                        await event.reply("pyro gagal dijalankan")
+                    except Exception as e:
+                        try:await event.reply("pyro gagal dijalankan "+e)
+                        except:await event.reply("pyro gagal dijalankan")
 
                         
                     
